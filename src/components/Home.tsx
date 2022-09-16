@@ -1,36 +1,21 @@
 import React from 'react'
-import Typewrite from './Typewrite'
 import Test from './Test'
 
 const Home = () => {
-  const text1: string = "Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text."
   return (
-    <div className='content'>
-      <Typewrite 
-        text={text1}
-      />
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-      <Test text={"Line 74:4:   React Hook useEffect has missing dependencies: 'coverArrayBoolean' and 'text'."}/>
-
-
+    <div className="content-wrapper">
+      <div className='content'>
+        <Test text={"#name -> syuto yoshida"}/>
+        <Test text={"#age  -> 22"}/>
+        <Test text={"#skill -> react, node.js, TypeScript, Next.js"}/>
+        <Test text={"#my best movie -> clock works of orage"}/>
+        <Test text={"#love -> music movie"}/>
+        <Test text={'String name = "syuto yoshida"'}/>
+        <Test text={"int age = 22"}/>
+        <Test text={'String[] language = ["react", "node.js", "TypeScript", "Next.js"]'}/>
+        <Test text={"#my best movie -> clock works of orage"}/>
+        <Test text={"#love -> music movie"}/>
+      </div>
     </div>
   )
 }
