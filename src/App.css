@@ -62,3 +62,18 @@ button:focus {
   text-align: left;
   width: 60%;
 }
+
+.content div {
+  margin: 4px 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  z-index: 10;
+  color: rgb(139, 255, 234);
+  font-size: 11px;
+}
