@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react'
 
 const Test = ({text}): JSX.Element => {
   const [textCur, setTextCur] = useState("")
-  const [display, setDisplay] = useState(false)
 
   const coverArrayBoolean = (coverArray: Array<boolean>): void => {
 
