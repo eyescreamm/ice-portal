@@ -13,13 +13,13 @@ const Header = () => {
           }}
           onInit = {(typewriter) => {
             typewriter.typeString("#####")
-            .pauseFor(100)
+            .pauseFor(200)
             .typeString('.')
-            .pauseFor(100)
+            .pauseFor(200)
             .typeString('.')
-            .pauseFor(100)
+            .pauseFor(200)
             .typeString('.')
-            .pauseFor(10000)
+            .pauseFor(5000)
             .start()
           }}
         /> 
