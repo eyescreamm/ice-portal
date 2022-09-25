@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-const Test = ({text}): JSX.Element => {
+const Shuffle = ({text}): JSX.Element => {
   const [textCur, setTextCur] = useState("")
 
   const coverArrayBoolean = (coverArray: Array<boolean>): void => {
@@ -58,4 +58,4 @@ const Test = ({text}): JSX.Element => {
   )
 }
 
-export default Test
+export default Shuffle
