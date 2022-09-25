@@ -21,7 +21,7 @@ header .logo {
   font-size: 20px;
 }
 
-button {
+.hamburger-menu {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
@@ -40,7 +40,7 @@ button {
   opacity: 1.0;
 }
 
-button:focus {
+.hamburger-menu:focus {
   outline: none;
 }
 
@@ -76,4 +76,16 @@ button:focus {
   z-index: 10;
   color: rgb(139, 255, 234);
   font-size: 11px;
+}
+
+/* animation */
+.box {
+  position: fixed;
+  top: 0px;
+  right: 0px; 
+  width: 400px;
+  height: 100%;
+  pointer-events: none;
+  background-color: rgb(139, 255, 234);
+  opacity: 0.5;
 }
