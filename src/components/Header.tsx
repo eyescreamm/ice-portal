@@ -1,6 +1,7 @@
 import React from 'react'
 import Menu from './Menu'
 import Typewriter from 'typewriter-effect'
+import Nav from './Nav'
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
             loop: true
           }}
           onInit = {(typewriter) => {
-            typewriter.typeString("#####")
+            typewriter.typeString("SYUTO YOSHIDA")
             .pauseFor(200)
             .typeString('.')
             .pauseFor(200)
@@ -26,6 +27,7 @@ const Header = () => {
       </div>
       <nav>
         <Menu />
+        <Nav />
       </nav>
     </header>
   )
