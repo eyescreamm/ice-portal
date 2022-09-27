@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from "framer-motion"
+import Nav from './Nav'
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -25,28 +26,54 @@ const Menu = () => {
   return (
     <div>
       <button
+        className='hamburger-menu'
         aria-label="Close menu"
         aria-expanded={menuOpen}
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? (
-          <motion.div
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 90 }}
-          transition={{ type: "tween", duration: 0.15 }}
-          >
+          <div>
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 90 }}
+              transition={{ type: "tween", duration: 0.15 }}
+            >
             <Close className="w-10 h-10" />
-          </motion.div>
+            </motion.div>
+          </div>
         ) : (
-          <motion.div
-            initial={{ rotate: 0 }}
-            animate={{ rotate: menuOpen ? 90 : 0 }}
-            transition={{ type: "tween", duration: 0.15 }}
-          >
-            <Open className="w-10 h-10" />
-          </motion.div>
+          <div>
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: menuOpen ? 90 : 0 }}
+              transition={{ type: "tween", duration: 0.15 }}
+            >
+              <Open className="w-10 h-10" />
+            </motion.div>
+          </div>
         )}
       </button>
+      {menuOpen ? (
+          <motion.div
+            className='menu-wrap'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.4 }}
+            transition={{ type: "tween", duration: 0.15 }}
+          >
+            <Nav />
+          </motion.div>
+        ) : (
+          <div>
+            <motion.div
+              className='menu-wrap'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: menuOpen ? 0.4 : 0 }}
+              transition={{ type: "tween", duration: 0.15 }}
+            >
+              <Nav />
+            </motion.div>
+          </div>
+        )}
     </div>
   )
 }
