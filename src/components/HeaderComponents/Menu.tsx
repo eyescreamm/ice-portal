@@ -37,7 +37,7 @@ const Menu = () => {
         >
           <motion.div
             id={ nowPage ===  item.link ? "active" : ""}
-            whileHover={{ scale: [null, 1.5, 1.3, 1.5, 1.3, 1.5, 1.3, 1.5, 1.3] }}
+            whileHover={{ scale: [null, 1.5, 1.35, 1.5, 1.35, 1.5, 1.35, 1.5, 1.35, 1.5, 1.3] }}
             transition={{ duration: 0.3 }}
           >
             { item.name }
@@ -106,12 +106,25 @@ const Menu = () => {
           <ul>
             { items }
             <li>
-              <a target="_blank" href="https://www.instagram.com/ccco___e/" rel="noreferrer">
-                <AiFillInstagram size={ 30 } />
-              </a>
-              <a target="_blank" href="https://github.com/eyescreamm" rel="noreferrer">
-                <AiFillGithub size={ 30 } />
+              <motion.div
+                className="icon"
+                whileHover={{ scale: [null, 1.3, 1.15, 1.3, 1.15, 1.3, 1.15, 1.3, 1.15, 1.3, 1.2] }}
+                transition={{ duration: 0.3 }}
+              >
+                <a target="_blank" href="https://www.instagram.com/ccco___e/" rel="noreferrer">
+                  <AiFillInstagram size={ 30 } />
                 </a>
+              </motion.div>
+              <span className="icon-space"></span>
+              <motion.div
+                className="icon"
+                whileHover={{ scale: [null, 1.3, 1.15, 1.3, 1.15, 1.3, 1.15, 1.3, 1.15, 1.3, 1.2] }}
+                transition={{ duration: 0.3 }}
+              >
+                <a target="_blank" href="https://github.com/eyescreamm" rel="noreferrer">
+                  <AiFillGithub size={ 30 } />
+                </a>
+              </motion.div>
             </li>
           </ul>
         </nav>
