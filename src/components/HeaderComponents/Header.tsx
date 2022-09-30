@@ -1,28 +1,22 @@
 import React from "react"
 import Menu from "./Menu"
-import Typewriter from "typewriter-effect"
+import { Typewriter } from "react-simple-typewriter"
 
 const Header = () => {
   return (
     <header>
       <div className="logo">
+        <span style={{ fontFamily: "system-ui", fontWeight: "inherit" }}>
         <Typewriter
-          options = {{
-            autoStart: true,
-            loop: true
-          }}
-          onInit = {(typewriter) => {
-            typewriter.typeString("SYUTO YOSHIDA")
-            .pauseFor(200)
-            .typeString(".")
-            .pauseFor(200)
-            .typeString(".")
-            .pauseFor(200)
-            .typeString(".")
-            .pauseFor(5000)
-            .start()
-          }}
-        /> 
+          words={['SYUTO YOSHIDA...', '...', '.......']}
+          loop={0}
+          cursor
+          cursorStyle='|'
+          typeSpeed={200}
+          deleteSpeed={100}
+          delaySpeed={10000}
+        />
+        </span>
       </div>
       <Menu />
     </header>
