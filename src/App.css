@@ -60,7 +60,7 @@ header .logo {
   color: rgb(139, 255, 234);
   /* 背景のみ透過 */
   background-color: rgb(255, 42, 216, 0.1);
-  margin: 200px auto;
+  margin: 150px auto;
   text-align: left;
   padding: 50px 70px;
 }
