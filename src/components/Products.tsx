@@ -6,13 +6,6 @@ const Products = () => {
     <div className="content-wrapper">
       <div className="content">
         <Shuffle text={"ProductsProductsProductsProductsProductsProducts"}/>
-        <Shuffle text={"ProductsProductsProductsProductsProductsProducts"}/>
-        <Shuffle text={"ProductsProductsProductsProductsProductsProducts"}/>
-        <Shuffle text={"ProductsProductsProductsProductsProductsProducts"}/>
-        <Shuffle text={"ProductsProductsProductsProductsProductsProducts"}/>
-        <Shuffle text={"ProductsProductsProductsProductsProductsProducts"}/>
-        <Shuffle text={"ProductsProductsProductsProductsProductsProducts"}/>
-        <Shuffle text={"ProductsProductsProductsProductsProductsProducts"}/>
       </div>
     </div>
   )

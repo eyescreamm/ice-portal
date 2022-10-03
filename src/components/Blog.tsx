@@ -5,7 +5,7 @@ const Blog = () => {
   return (
     <div className="content-wrapper">
       <div className="content">
-        <Shuffle text={"lovelovelovelovelvoelovelovelovelove"}/>
+        <Shuffle text={"BlogBlogBlogBlogBlogBlogBlogBlog"}/>
       </div>
     </div>
   )
