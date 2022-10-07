@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { AiFillInstagram, AiFillGithub } from "react-icons/ai"
 
 const Menu = () => {
+  const location = useLocation();
   const elm = useRef<HTMLDivElement>(null)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [nowPage, setNowPage] = useState("/")
+  const [nowPage, setNowPage] = useState(location.pathname)
   const [width, setWidth] = useState(500)
 
   useEffect(() => {
     const onResize = () => {
-      console.log("aa")
       if (elm.current) {
         const clientWidth = elm?.current.clientWidth;
         setWidth(clientWidth)
