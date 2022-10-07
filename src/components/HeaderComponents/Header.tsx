@@ -6,9 +6,9 @@ const Header = () => {
   return (
     <header>
       <div className="logo">
-        <span style={{ fontFamily: "system-ui", fontWeight: "inherit" }}>
+        <span style={{ fontFamily: "system-ui", fontWeight: "bolder" }}>
         <Typewriter
-          words={['SYUTO YOSHIDA...', '...', '.......']}
+          words={["ic__e", "ic___e", "ic____e", "ic_____e"]}
           loop={0}
           cursor
           cursorStyle='|'
