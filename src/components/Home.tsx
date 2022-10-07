@@ -5,23 +5,29 @@ const Home = () => {
   return (
     <div className="content-wrapper">
       <div className="content">
-        <Shuffle text={"Thanks to visit my portal!"}/>
-        <Shuffle text={"Press the menu in the upper right corner to open each page."}/>
-        <Shuffle text={"-----------------------------------------------------------"}/>
+        <Shuffle className={"css-selector"} text={"Thanks to visit my portal!"}/>
+        <Shuffle className={"css-selector"} text={"Press the menu button to open each page."}/>
+        <Shuffle text={"----------------------------------------"}/>
+        <Shuffle className={"menu-item"} text={"HOME"}/>
+        <Shuffle text={"--> This page."}/>
         <br/>
-        <Shuffle text={"HOME --> This page."}/>
+        <Shuffle className={"menu-item"} text={"PROFILE"}/>
+        <Shuffle text={"--> Get to know more about me!"}/>
         <br/>
-        <Shuffle text={"PROFILE --> Get to know more about me!"}/>
+        <Shuffle className={"menu-item"} text={"BLOG"}/>
+        <Shuffle text={"--> My blog. I write about all sorts of things."}/>
         <br/>
-        <Shuffle text={"BLOG --> My blog. I write about all sorts of things."}/>
+        <Shuffle className={"menu-item"} text={"PRODUCTS"}/>
+        <Shuffle text={"--> Here are some of the things I have made."}/>
         <br/>
-        <Shuffle text={"PRODUCTS --> Here are some of the things I have made."}/>
+        <Shuffle className={"menu-item"} text={"HIT ME!"}/>
+        <Shuffle text={"--> Please contact me by email!"}/>
         <br/>
-        <Shuffle text={"HIT ME! --> Please contact me by email!"}/>
         <br/>
-        <Shuffle text={"I'd be happy to check my instagram and GitHub. Push the icon!"}/>
+        <Shuffle text={"I'd be happy to check my instagram and GitHub."}/>
+        <Shuffle text={"Push the icon!"}/>
         <br/>
-        <Shuffle text={"-----------------------------------------------------------"}/>
+        <Shuffle text={"----------------------------------------"}/>
       </div>
     </div>
   )

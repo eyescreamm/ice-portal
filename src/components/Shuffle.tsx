@@ -3,9 +3,10 @@ import React, {useEffect, useState} from 'react'
 type Props = {
   className?: string
   text: string
+  newLine?: boolean
 }
 
-const Shuffle = ({className, text}: Props) => {
+const Shuffle = ({className, text, newLine}: Props) => {
   const [textCur, setTextCur] = useState("")
 
   const coverArrayBoolean = (coverArray: Array<boolean>): void => {
@@ -56,9 +57,7 @@ const Shuffle = ({className, text}: Props) => {
   }, [])
 
 
-  return (
-    <div className={className}>{textCur}</div>
-  )
+  return newLine === false ? <span className={className}>{textCur}</span> : <div className={className}>{textCur}</div>
 }
 
 export default Shuffle
