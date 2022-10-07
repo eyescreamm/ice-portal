@@ -20,14 +20,15 @@ const Menu = () => {
     window.addEventListener('resize', onResize);
   }, [elm]);
 
+  // メニュー項目情報
   const itemInfo = [
     { link: "/", name: "HOME" },
     { link: "/profile", name: "PROFILE"},
     { link: "/blog", name: "BLOG"},
     { link: "/products", name: "PRODUCTS"},
-    { link: "/hit", name: "HIT ME"}
   ]
 
+  // メニュー項目の一覧を作成
   const items = itemInfo.map((item: any) => {
     return (
       <li>
@@ -47,6 +48,7 @@ const Menu = () => {
     )
   })
 
+  // ボタンクリック時 ハンバーガーメニューのアニメーション処理
   const Open = ({ ...props }) => (
     <svg { ...props } width="17" height="15" viewBox="0 0 17 15" fill="none">
       <path
@@ -105,6 +107,16 @@ const Menu = () => {
         <nav>
           <ul>
             { items }
+            <li>
+              <motion.div
+                whileHover={{ scale: [null, 1.3, 1.15, 1.3, 1.15, 1.3, 1.15, 1.3, 1.15, 1.3, 1.2] }}
+                transition={{ duration: 0.3 }}
+              >
+                <a href="mailto:icecream.rmn&#64;gmail.com">
+                  HIT ME!
+                </a>
+              </motion.div>
+            </li>
             <li>
               <motion.div
                 className="icon"
