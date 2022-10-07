@@ -79,8 +79,8 @@ header .logo {
 .sub-prof-item {
   font-size: 18px;
   color: rgb(255, 229, 195);
-  margin-top: 6px;
-  margin-bottom: 5px;
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
 
 .others-button {
@@ -169,12 +169,29 @@ header .logo {
   width: 10px;
 }
 
+/* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
   .content-wrapper {
     width: 90%;
   }
   .content {
     font-size: 16px;
+    padding: 50px 50px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .head {
+    font-size: 3.75vw;
+  }
+  .prof-item, .menu-item {
+    font-size: 3.508772vw;
+  }
+  .sub-prof-item {
+    font-size: 3.157895vw;
+  }
+  .content {
+    font-size: 2.8vw;
     padding: 50px 50px;
   }
 }
@@ -186,12 +203,21 @@ header .logo {
   .content-wrapper {
     width: 93%;
   }
+  .head {
+    font-size: 3.8vw;
+  }
+  .prof-item, .menu-item {
+    font-size: 3.6;
+  }
+  .sub-prof-item {
+    font-size: 3.2vw;
+  }
   .content {
-    font-size: 15px;
+    font-size: 3vw;
     padding: 50px 20px;
   }
   .menu-wrap {
-    background-color: rgb(255, 141, 42, 0.6);
+    background-color: rgb(241, 157, 83, 0.6);
     width: 100%;
   }
 }

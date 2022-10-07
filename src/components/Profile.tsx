@@ -28,8 +28,8 @@ const Profile = () => {
         <Shuffle text={"-> technology (machine learning)"}/>
         <Shuffle text={"-> spiritual"}/>
         <button className="others-button" onClick={ () => setActive(!active)}><Shuffle className={"prof-item"} text={"# others "}/></button>
-        <span>&nbsp;&nbsp;&nbsp;&lt;</span>
-        <Shuffle text={"- click to get more info!"} newLine={false}/>
+        <span>&nbsp;&nbsp;&lt;</span>
+        <Shuffle text={"- click to get more info"} newLine={false}/>
         <div className={active ? "" : "others-none"}>
           <Shuffle className={"sub-prof-item"} text={"## my loving music"}/>
           <Shuffle text={"-> A Day in the Life / The Beatles"}/>
