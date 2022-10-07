@@ -1,6 +1,11 @@
 import React, {useEffect, useState} from 'react'
 
-const Shuffle = ({text}): JSX.Element => {
+type Props = {
+  className?: string
+  text: string
+}
+
+const Shuffle = ({className, text}: Props) => {
   const [textCur, setTextCur] = useState("")
 
   const coverArrayBoolean = (coverArray: Array<boolean>): void => {
@@ -52,9 +57,7 @@ const Shuffle = ({text}): JSX.Element => {
 
 
   return (
-    <div>
-      <div>{textCur}</div>
-    </div>
+    <div className={className}>{textCur}</div>
   )
 }
 
