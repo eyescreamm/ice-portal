@@ -13,7 +13,8 @@ const Profile = () => {
         <Shuffle className={"prof-item"} text={"# age"}/>
         <Shuffle text={"-> 22 (1999th)"}/>
         <Shuffle className={"prof-item"} text={"# computer skill"}/>
-        <Shuffle text={"-> JavaScript (React, Node.js, TypeScript, jQuery)"}/>
+        <Shuffle text={"-> JavaScript"}/> 
+        <span>&nbsp;&nbsp;&nbsp;</span><Shuffle text={"(React, Node.js, TypeScript, jQuery)"} newLine={false}/>
         <Shuffle text={"-> java (SpringBoot)"}/>
         <Shuffle text={"-> MATLAB"}/>
         <Shuffle text={"-> PureData"}/>
