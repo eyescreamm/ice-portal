@@ -37,11 +37,11 @@ const Profile = () => {
           <Shuffle className={"sub-prof-item"} text={"## my loving movies"}/>
           <Shuffle text={"-> Eyes Wide Shut / Stanley Kubrick"}/>
           <Shuffle text={"-> Sonatine / Takeshi Kitano"}/>
-          <Shuffle className={"sub-prof-item"} text={"## School days' Dream"}/>
+          <Shuffle className={"sub-prof-item"} text={"## school days' Dream"}/>
           <Shuffle text={"-> manga artist || baseball player"}/>
-          <Shuffle className={"sub-prof-item"} text={"## Current Dream"}/>
+          <Shuffle className={"sub-prof-item"} text={"## current Dream"}/>
           <Shuffle text={"-> become 'someone' && produce a lot"}/>
-          <Shuffle className={"sub-prof-item"} text={"## Motto"}/>
+          <Shuffle className={"sub-prof-item"} text={"## motto"}/>
           <Shuffle text={"-> life with love!"}/>
         </div>
       </div>
