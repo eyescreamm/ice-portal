@@ -1,63 +1,68 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react';
 
 type Props = {
-  className?: string
-  text: string
-  newLine?: boolean
-}
+  className?: string;
+  text: string;
+  newLine?: boolean;
+};
 
-const Shuffle = ({className, text, newLine}: Props) => {
-  const [textCur, setTextCur] = useState("")
+const Shuffle = ({ className, text, newLine }: Props) => {
+  const [textShuffled, setTextShuffled] = useState('');
 
-  const coverArrayBoolean = (coverArray: Array<boolean>): void => {
-
-    // if not covered, cover it
+  const endShuffledArrayBoolean = (endShuffledArray: Array<boolean>): void => {
+    // Randomly determine the number of character that ends the shuffle
     for (let i = 0; i < 2; i++) {
-      // gen random index of 0 to text.length
-      const randomNum = Math.floor(Math.random() * text.length)
-      if (coverArray[randomNum] === false) {
-        coverArray[randomNum] = true
-        break
+      const randomNum = Math.floor(Math.random() * text.length);
+      if (endShuffledArray[randomNum] === false) {
+        endShuffledArray[randomNum] = true;
+        break;
       }
     }
-  }
+  };
 
-  const isFilled = (covered: Array<boolean>): boolean => {
-    return !covered.includes(false)
-  }
+  const isFilled = (endShuffled: Array<boolean>): boolean => {
+    return !endShuffled.includes(false);
+  };
 
-  useEffect(() =>  {
-    let changed = Array(text.length).fill(false)
-    const sym = [",", ".", "/", "^", "¥", "*", "*", "_", "#", "$", "!", "&"]
-    const love = setInterval(() => {
+  useEffect(() => {
+    let endShuffledArray = Array(text.length).fill(false);
+    const sym = [',', '.', '/', '^', '¥', '*', '*', '_', '#', '$', '!', '&'];
 
-      if (isFilled(changed)) {
-        clearInterval(love)
-        return
+    // update text at set time interval
+    const updateText = setInterval(() => {
+      // judge all char have finished shuffling
+      if (isFilled(endShuffledArray)) {
+        clearInterval(updateText);
+        return;
       }
 
       for (let i = 0; i < 2; i++) {
-        coverArrayBoolean(changed)
+        endShuffledArrayBoolean(endShuffledArray);
       }
 
-      // gen random text
-      const newText = text.split("").map((char, index) => {
-        if (changed[index]) {
-          return char
+      const newText = text.split('').map((char, index) => {
+        if (endShuffledArray[index]) {
+          return char;
         } else {
-          if (char === " ") {
-            return " "
+          if (char === ' ') {
+            return ' ';
           }
-          return sym[Math.floor(Math.random() * sym.length)]
+          return sym[Math.floor(Math.random() * sym.length)];
         }
-      })
-      setTextCur(newText.join(""))
-    }, 30)
-    return () => clearInterval(love)
-  }, [])
+      });
 
+      setTextShuffled(newText.join(''));
+    }, 30);
 
-  return newLine === false ? <span className={className}>{textCur}</span> : <div className={className}>{textCur}</div>
-}
+    return () => clearInterval(updateText);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-export default Shuffle
+  return newLine === false ? (
+    <span className={className}>{textShuffled}</span>
+  ) : (
+    <div className={className}>{textShuffled}</div>
+  );
+};
+
+export default Shuffle;
