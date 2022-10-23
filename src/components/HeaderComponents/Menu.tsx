@@ -1,15 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
 import { AiFillInstagram, AiFillGithub } from 'react-icons/ai';
+import { useLocation } from 'react-router-dom';
+import Items from './Items';
 
 const Menu = () => {
-  const location = useLocation();
   const elm = useRef<HTMLDivElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [nowPage, setNowPage] = useState(location.pathname);
   const [width, setWidth] = useState(500);
+  const [nowPage, setNowPage] = useState(useLocation().pathname);
 
+  // menu width change by screen width
   useEffect(() => {
     const onResize = () => {
       if (elm.current) {
@@ -26,42 +27,6 @@ const Menu = () => {
     { link: '/blog', name: 'BLOG' },
     { link: '/products', name: 'PRODUCTS' },
   ];
-
-  // create menu items
-  const items = itemInfo.map((item: any) => {
-    return (
-      <li>
-        <Link
-          to={item.link}
-          onClick={() => {
-            setNowPage(item.link);
-          }}
-        >
-          <motion.div
-            id={nowPage === item.link ? 'active' : ''}
-            whileHover={{
-              scale: [
-                null,
-                1.5,
-                1.35,
-                1.5,
-                1.35,
-                1.5,
-                1.35,
-                1.5,
-                1.35,
-                1.5,
-                1.3,
-              ],
-            }}
-            transition={{ duration: 0.3 }}
-          >
-            {item.name}
-          </motion.div>
-        </Link>
-      </li>
-    );
-  });
 
   const Open = ({ ...props }) => (
     <svg {...props} width="17" height="15" viewBox="0 0 17 15" fill="none">
@@ -120,7 +85,15 @@ const Menu = () => {
       >
         <nav>
           <ul>
-            {items}
+            {itemInfo.map((item, index) => (
+              <li
+                onClick={() => {
+                  setNowPage(item.link);
+                }}
+              >
+                <Items link={item.link} name={item.name} nowPage={nowPage} />
+              </li>
+            ))}
             <li>
               <motion.div
                 whileHover={{
