@@ -1,14 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { AiFillInstagram, AiFillGithub } from 'react-icons/ai';
-import { useLocation } from 'react-router-dom';
 import Items from './Items';
 
 const Menu = () => {
   const elm = useRef<HTMLDivElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [width, setWidth] = useState(500);
-  const [nowPage, setNowPage] = useState(useLocation().pathname);
 
   // menu width change by screen width
   useEffect(() => {
@@ -86,12 +84,8 @@ const Menu = () => {
         <nav>
           <ul>
             {itemInfo.map((item, index) => (
-              <li
-                onClick={() => {
-                  setNowPage(item.link);
-                }}
-              >
-                <Items link={item.link} name={item.name} nowPage={nowPage} />
+              <li>
+                <Items link={item.link} name={item.name} />
               </li>
             ))}
             <li>

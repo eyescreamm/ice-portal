@@ -1,18 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 type Info = {
   link: string;
   name: string;
-  nowPage: string;
 };
 
-const Items = ({ link, name, nowPage }: Info) => {
+const Items = ({ link, name }: Info) => {
   return (
-    <Link to={link}>
+    <NavLink end to={link}>
       <motion.div
-        id={nowPage === link ? 'active' : ''}
         whileHover={{
           scale: [null, 1.5, 1.35, 1.5, 1.35, 1.5, 1.35, 1.5, 1.35, 1.5, 1.3],
         }}
@@ -20,7 +18,7 @@ const Items = ({ link, name, nowPage }: Info) => {
       >
         {name}
       </motion.div>
-    </Link>
+    </NavLink>
   );
 };
 
