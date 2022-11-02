@@ -39,7 +39,6 @@ header .logo {
   margin-right: 75px;
   height: 100px;
   text-transform: none;
-  -webkit-appearance: button;
   background-color: transparent;
   background-image: none;
   padding: 0;
@@ -89,7 +88,7 @@ header .logo {
   height: 80px;
 }
 
-.menu-wrap li #active {
+.menu-wrap li .active div {
   background-color: rgb(255, 85, 85);
   color: #fcf3e4;
   font-weight: 800;
@@ -129,6 +128,10 @@ header .logo {
   margin: 150px auto;
   text-align: left;
   padding: 50px 70px;
+}
+
+.content a {
+  text-decoration: none;
 }
 
 .head {
