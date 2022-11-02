@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Shuffle from './Shuffle';
 
 const Home = () => {
@@ -14,19 +15,29 @@ const Home = () => {
           text={'Press the menu button to open each page.'}
         />
         <Shuffle text={'----------------------------------------'} />
-        <Shuffle className={'menu-item'} text={'HOME'} />
+        <Link to="/">
+          <Shuffle className={'menu-item'} text={'HOME'} />
+        </Link>
         <Shuffle text={'--> This page.'} />
         <br />
-        <Shuffle className={'menu-item'} text={'PROFILE'} />
+        <Link to="/profile">
+          <Shuffle className={'menu-item'} text={'PROFILE'} />
+        </Link>
         <Shuffle text={'--> Get to know more about me!'} />
         <br />
-        <Shuffle className={'menu-item'} text={'BLOG'} />
+        <Link to="/blog">
+          <Shuffle className={'menu-item'} text={'BLOG'} />
+        </Link>
         <Shuffle text={'--> My blog. I write about all sorts of things.'} />
         <br />
-        <Shuffle className={'menu-item'} text={'PRODUCTS'} />
+        <Link to="/products">
+          <Shuffle className={'menu-item'} text={'PRODUCTS'} />
+        </Link>
         <Shuffle text={'--> Here are some of the things I have made.'} />
         <br />
-        <Shuffle className={'menu-item'} text={'HIT ME!'} />
+        <a href="mailto:icecream.rmn&#64;gmail.com">
+          <Shuffle className={'menu-item'} text={'HIT ME!'} />
+        </a>
         <Shuffle text={'--> Please contact me by email!'} />
         <br />
         <br />
