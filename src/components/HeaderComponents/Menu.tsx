@@ -22,7 +22,6 @@ const Menu = () => {
   const itemInfo = [
     { link: '/', name: 'HOME' },
     { link: '/profile', name: 'PROFILE' },
-    { link: '/blog', name: 'BLOG' },
     { link: '/products', name: 'PRODUCTS' },
   ];
 
@@ -88,6 +87,34 @@ const Menu = () => {
                 <Items link={item.link} name={item.name} />
               </li>
             ))}
+            <li>
+              <motion.div
+                whileHover={{
+                  scale: [
+                    null,
+                    1.3,
+                    1.15,
+                    1.3,
+                    1.15,
+                    1.3,
+                    1.15,
+                    1.3,
+                    1.15,
+                    1.3,
+                    1.2,
+                  ],
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <a
+                  target="_blank"
+                  href="https://ice-blog.vercel.app/"
+                  rel="noreferrer"
+                >
+                  BLOG
+                </a>
+              </motion.div>
+            </li>
             <li>
               <motion.div
                 whileHover={{
