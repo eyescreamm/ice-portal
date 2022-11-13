@@ -25,15 +25,15 @@ const Home = () => {
         </Link>
         <Shuffle text={'--> Get to know more about me!'} />
         <br />
-        <Link to="/blog">
-          <Shuffle className={'menu-item'} text={'BLOG'} />
-        </Link>
-        <Shuffle text={'--> My blog. I write about all sorts of things.'} />
-        <br />
         <Link to="/products">
           <Shuffle className={'menu-item'} text={'PRODUCTS'} />
         </Link>
         <Shuffle text={'--> Here are some of the things I have made.'} />
+        <br />
+        <a target="_blank" href="https://ice-blog.vercel.app/" rel="noreferrer">
+          <Shuffle className={'menu-item'} text={'BLOG'} />
+        </a>
+        <Shuffle text={'--> My blog. I write about all sorts of things.'} />
         <br />
         <a href="mailto:icecream.rmn&#64;gmail.com">
           <Shuffle className={'menu-item'} text={'HIT ME!'} />
