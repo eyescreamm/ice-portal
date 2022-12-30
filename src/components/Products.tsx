@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Shuffle from './Shuffle';
 
 const Products = () => {
@@ -7,11 +6,11 @@ const Products = () => {
     <div className="content-wrapper">
       <div className="content">
         <Shuffle className={'head css-selector'} text={'products'} />
-        <Shuffle text={'-------------'} />
+        <Shuffle text={'------------'} />
         <a target="_blank" href="https://ice-blog.vercel.app/" rel="noreferrer">
           <Shuffle className={'menu-item'} text={'# Personal blog'} />
         </a>
-        <Shuffle newLine={false} text={'github code ->'} />
+        <Shuffle newLine={false} text={'github ->'} />
         <span>&nbsp;</span>
         <a
           target="_blank"

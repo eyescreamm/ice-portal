@@ -17,10 +17,11 @@ const Profile = () => {
         <Shuffle text={'-> JavaScript'} />
         <span>&nbsp;&nbsp;&nbsp;</span>
         <Shuffle
-          text={'(React, Node.js, TypeScript, jQuery)'}
+          text={'(React, next.js, TypeScript, jQuery)'}
           newLine={false}
         />
         <Shuffle text={'-> java (SpringBoot)'} />
+        <Shuffle text={'-> GraphQL'} />
         <Shuffle text={'-> MATLAB'} />
         <Shuffle text={'-> PureData'} />
         <Shuffle className={'prof-item'} text={'# my research'} />
@@ -34,7 +35,7 @@ const Profile = () => {
         <Shuffle text={'-> music'} />
         <Shuffle text={'-> movie'} />
         <Shuffle text={'-> clothes'} />
-        <Shuffle text={'-> technology (machine learning)'} />
+        <Shuffle text={'-> technology'} />
         <Shuffle text={'-> spiritual'} />
         <button
           className="others-button"
@@ -53,9 +54,9 @@ const Profile = () => {
           <Shuffle className={'sub-prof-item'} text={"## school days' Dream"} />
           <Shuffle text={'-> manga artist || baseball player'} />
           <Shuffle className={'sub-prof-item'} text={'## current Dream'} />
-          <Shuffle text={"-> become 'someone' && produce a lot"} />
+          <Shuffle text={'-> creating a lot'} />
           <Shuffle className={'sub-prof-item'} text={'## motto'} />
-          <Shuffle text={'-> life with love!'} />
+          <Shuffle text={'-> love and creation'} />
         </div>
       </div>
     </div>
