@@ -23,6 +23,20 @@ const Products = () => {
           />
         </a>
         <Shuffle text={'about -> TypeScript, React, Nextjs, GraphQL'} />
+        <a
+          target="_blank"
+          href="https://kind-bay-0b2244800.5.azurestaticapps.net/"
+          rel="noreferrer"
+        >
+          <Shuffle
+            className={'menu-item'}
+            text={'# Cloud Synth (incomplete...)'}
+          />
+        </a>
+        <Shuffle newLine={false} text={'github ->'} />
+        <span>&nbsp;</span>
+        <span>in private</span>
+        <Shuffle text={'about -> TypeScript, React, MySQL, Node.js, Docker'} />
       </div>
     </div>
   );
