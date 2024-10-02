@@ -29,14 +29,18 @@ const Profile = () => {
         <Shuffle className={'prof-item'} text={'# age'} />
         <Shuffle text={'-> ' + getAge() + ' (1999th)'} />
         <Shuffle className={'prof-item'} text={'# computer skill'} />
-        <Shuffle text={'-> JavaScript'} />
+        <Shuffle text={'-> front-end'} />
         <span>&nbsp;&nbsp;&nbsp;</span>
         <Shuffle
-          text={'(React, next.js, TypeScript, jQuery)'}
+          text={'(React, Next.js, TypeScript, jQuery, Tailwind CSS)'}
           newLine={false}
         />
-        <Shuffle text={'-> java (SpringBoot)'} />
-        <Shuffle text={'-> GraphQL'} />
+        <Shuffle text={'-> back-end'} />
+        <span>&nbsp;&nbsp;&nbsp;</span>
+        <Shuffle text={'(java, Go, PHP'} newLine={false} />
+        <Shuffle text={'-> infrastructure'} />
+        <span>&nbsp;&nbsp;&nbsp;</span>
+        <Shuffle text={'(GraphQL, MySQL, Docker'} newLine={false} />
         <Shuffle text={'-> MATLAB'} />
         <Shuffle text={'-> PureData'} />
         <Shuffle className={'prof-item'} text={'# my research'} />
