@@ -159,7 +159,7 @@ const Menu = () => {
               >
                 <a
                   target="_blank"
-                  href="https://www.instagram.com/ccco___e/"
+                  href="https://www.instagram.com/syuto_yoshida/"
                   rel="noreferrer"
                 >
                   <AiFillInstagram size={30} />
