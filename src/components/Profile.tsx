@@ -4,6 +4,21 @@ import Shuffle from './Shuffle';
 const Profile = () => {
   const [displayOthers, setDisplayOthers] = useState(false);
 
+  const getAge = () => {
+    const birthDate = new Date(1999, 11, 16);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    const dayDifference = today.getDate() - birthDate.getDate();
+
+    // 誕生日がまだ来ていなければ年齢を1歳減らす
+    if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+      age--;
+    }
+
+    return age;
+  };
+
   return (
     <div className="content-wrapper">
       <div className="content">
@@ -12,7 +27,7 @@ const Profile = () => {
         <Shuffle className={'prof-item'} text={'# name'} />
         <Shuffle text={'-> Syuto Yoshida || ic__e'} />
         <Shuffle className={'prof-item'} text={'# age'} />
-        <Shuffle text={'-> 22 (1999th)'} />
+        <Shuffle text={'-> ' + getAge() + ' (1999th)'} />
         <Shuffle className={'prof-item'} text={'# computer skill'} />
         <Shuffle text={'-> JavaScript'} />
         <span>&nbsp;&nbsp;&nbsp;</span>
@@ -51,10 +66,8 @@ const Profile = () => {
           <Shuffle className={'sub-prof-item'} text={'## my loving movies'} />
           <Shuffle text={'-> Eyes Wide Shut / Stanley Kubrick'} />
           <Shuffle text={'-> Sonatine / Takeshi Kitano'} />
-          <Shuffle className={'sub-prof-item'} text={"## school days' Dream"} />
-          <Shuffle text={'-> manga artist || baseball player'} />
           <Shuffle className={'sub-prof-item'} text={'## current Dream'} />
-          <Shuffle text={'-> creating a lot'} />
+          <Shuffle text={'-> to be free'} />
           <Shuffle className={'sub-prof-item'} text={'## motto'} />
           <Shuffle text={'-> love and creation'} />
         </div>
