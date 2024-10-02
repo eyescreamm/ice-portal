@@ -37,10 +37,10 @@ const Profile = () => {
         />
         <Shuffle text={'-> back-end'} />
         <span>&nbsp;&nbsp;&nbsp;</span>
-        <Shuffle text={'(java, Go, PHP'} newLine={false} />
+        <Shuffle text={'(java, Go, PHP)'} newLine={false} />
         <Shuffle text={'-> infrastructure'} />
         <span>&nbsp;&nbsp;&nbsp;</span>
-        <Shuffle text={'(GraphQL, MySQL, Docker'} newLine={false} />
+        <Shuffle text={'(GraphQL, MySQL, Docker)'} newLine={false} />
         <Shuffle text={'-> MATLAB'} />
         <Shuffle text={'-> PureData'} />
         <Shuffle className={'prof-item'} text={'# my research'} />
